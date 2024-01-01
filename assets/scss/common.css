@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Outfit-Regular";
+  src: url("/assets/fonts/Outfit-Regular.otf");
+}
+@font-face {
+  font-family: "Outfit-Bold";
+  src: url("/assets/fonts/Outfit-Bold.otf");
+}
+@font-face {
+  font-family: "Priego-Semibold";
+  src: url("/assets/fonts/Fontspring-DEMO-priego-semibold.otf");
+}
+@font-face {
+  font-family: "Outfit-Light";
+  src: url("/assets/fonts/Outfit-Light.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-fluid {
+  @apply block w-full h-auto;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.btn {
+  @apply rounded-full py-2.5 px-6;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.main-heading {
+  text-align: center;
+  font-family: Outfit-Bold;
+  font-size: 4.5rem;
+  line-height: normal;
+  letter-spacing: 0.09rem;
+}
+
+.sub-content {
+  font-family: Outfit-Regular;
+  font-size: 1.5rem;
+  line-height: 34px;
+}
+
+.description {
+  font-family: Outfit-black;
+  font-size: 1.125rem;
+  line-height: 26px;
+}/*# sourceMappingURL=common.css.map */

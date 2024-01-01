@@ -1,0 +1,17 @@
+{
+  "name": "tailwind-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./assets/scss/common.css -o ./assets/css/common.css --watch",
+    "nav": "npx tailwindcss -i ./assets/scss/header.css -o ./assets/css/header.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
