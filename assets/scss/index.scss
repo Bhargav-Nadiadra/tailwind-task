@@ -1,0 +1,199 @@
+// hero-section starts
+.hero {
+  margin-top: 53px;
+}
+
+.hero-content {
+  @apply grid grid-cols-12 gap-4 pt-6;
+}
+
+.left-hero {
+  @apply relative col-span-5;
+
+  .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.left-bg {
+  @apply bg-grey p-10 rounded-[2.5rem];
+}
+
+.right-hero {
+  @apply col-span-7;
+
+  img {
+    @apply rounded-[2.5rem];
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+}
+.left-hero-heading {
+  @apply tracking-wider font-normal leading-10 text-heading;
+  font-family: Priego-Regular;
+  font-size: 2.5rem;
+  padding-bottom: 50px;
+  max-width: 248px;
+}
+
+.call-text {
+  @apply leading-6  font-medium;
+  font-family: Outfit-Medium;
+  font-size: 18px;
+}
+
+.call-num {
+  @apply font-semibold;
+  font-family: Outfit-Semibold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.callbar {
+  @apply pl-10 py-5 mt-4 bg-primary rounded-l-[7.5rem] relative;
+}
+
+.call-icon {
+  @apply absolute top-1/2 bottom-1/2  items-center rounded-full h-full justify-center flex bg-primary;
+  border: 10px solid white;
+  transform: translateY(-50%);
+  width: 100px;
+  right: -55px;
+  img {
+    width: 44px;
+  }
+}
+// hero-section ends
+
+// dreams section start
+.dreams {
+  margin-top: 100px;
+}
+
+.dreams-left {
+  @apply col-span-8 py-10 pl-10;
+}
+.dreams-right {
+  @apply col-span-4;
+}
+.dreams-wrapper {
+  @apply bg-grey  rounded-[2.5rem] grid grid-cols-12 relative;
+}
+.dreams-heading {
+  @apply tracking-wider text-heading pb-6;
+  font-family: Priego-Bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+// dreams section ends
+
+// choice section starts
+.choice {
+  margin-top: 100px;
+}
+.choice-wrapper {
+  @apply bg-black p-10;
+
+  .main-heading {
+    color: #ffffff;
+    font-family: Priego-Bold;
+  }
+  .sub-content {
+    text-align: center;
+  }
+}
+.cards {
+  @apply bg-grey opacity-15;
+}
+
+.card-wrapper {
+  @apply flex items-center gap-6;
+}
+
+.card-number {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: Outfit-Bold;
+  //   color: #ffffff;
+}
+// choice section ends
+
+@media (max-width: 1399px) {
+  .left-hero-heading {
+    font-size: 36px;
+  }
+  .call-num {
+    font-size: 22px;
+  }
+  .call-text {
+    font-size: 16px;
+  }
+  .dreams-heading {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 1199px) {
+  .left-hero-heading {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .dreams-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .left-hero {
+    @apply col-span-12;
+  }
+  .right-hero {
+    @apply col-span-12;
+  }
+  .call-icon {
+    right: 0;
+  }
+  .callbar {
+    @apply rounded-r-[7.5rem];
+  }
+}
+
+@media (max-width: 768px) {
+  .left-hero-heading {
+    font-size: 28px;
+  }
+  .call-num {
+    font-size: 18px;
+  }
+  .dreams-heading {
+    font-size: 28px;
+  }
+  .dreams-left {
+    @apply col-span-12 p-10;
+  }
+  .dreams-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .left-hero-heading {
+    font-size: 24px;
+  }
+  .call-num {
+    font-size: 18px;
+  }
+  .call-text {
+    font-size: 14px;
+  }
+  .dreams-heading {
+    font-size: 24px;
+  }
+}

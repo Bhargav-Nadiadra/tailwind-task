@@ -10,12 +10,28 @@
   src: url("/assets/fonts/Outfit-Bold.otf");
 }
 @font-face {
-  font-family: "Priego-Semibold";
-  src: url("/assets/fonts/Fontspring-DEMO-priego-semibold.otf");
+  font-family: "Outfit-Semibold";
+  src: url("/assets/fonts/Outfit-SemiBold.otf");
+}
+@font-face {
+  font-family: "Outfit-Medium";
+  src: url("/assets/fonts/Outfit-Medium.otf");
 }
 @font-face {
   font-family: "Outfit-Light";
   src: url("/assets/fonts/Outfit-Light.otf");
+}
+@font-face {
+  font-family: "Priego-Semibold";
+  src: url("/assets/fonts/Fontspring-DEMO-priego-semibold.otf");
+}
+@font-face {
+  font-family: "Priego-Bold";
+  src: url("/assets/fonts/Fontspring-DEMO-priego-bold.otf");
+}
+@font-face {
+  font-family: "Priego-Regular";
+  src: url("/assets/fonts/Fontspring-DEMO-priego-regular.otf");
 }
 * {
   margin: 0;
@@ -53,13 +69,73 @@ img {
 }
 
 .sub-content {
+  @apply text-light;
   font-family: Outfit-Regular;
   font-size: 1.5rem;
-  line-height: 34px;
+  line-height: 2.1rem;
 }
 
 .description {
   font-family: Outfit-black;
   font-size: 1.125rem;
   line-height: 26px;
+}
+
+@media (max-width: 1399px) {
+  .container {
+    max-width: 1100px;
+  }
+  .main-heading {
+    font-size: 64px;
+  }
+  .sub-content {
+    font-size: 22px;
+    line-height: 1.8rem;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    max-width: 992px;
+    @apply px-6;
+  }
+  .main-heading {
+    font-size: 56px;
+  }
+  .sub-content {
+    font-size: 20px;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+    @apply px-4;
+  }
+  .main-heading {
+    font-size: 48px;
+  }
+  .sub-content {
+    font-size: 18px;
+    line-height: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 567px;
+  }
+  .main-heading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+  .main-heading {
+    font-size: 36px;
+  }
+  .sub-content {
+    font-size: 16px;
+    line-height: 1rem;
+  }
 }/*# sourceMappingURL=common.css.map */

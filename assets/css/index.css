@@ -1,0 +1,265 @@
+.hero {
+  margin-top: 53px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.left-hero {
+  position: relative;
+  grid-column: span 5 / span 5;
+}
+
+.left-hero .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.left-bg {
+  border-radius: 2.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
+  padding: 2.5rem;
+}
+
+.right-hero {
+  grid-column: span 7 / span 7;
+}
+
+.right-hero img {
+  border-radius: 2.5rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  height: 100%;
+}
+
+.left-hero-heading {
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(69 69 69 / var(--tw-text-opacity));
+  font-family: Priego-Regular;
+  font-size: 2.5rem;
+  padding-bottom: 50px;
+  max-width: 248px;
+}
+
+.call-text {
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-family: Outfit-Medium;
+  font-size: 18px;
+}
+
+.call-num {
+  font-weight: 600;
+  font-family: Outfit-Semibold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.callbar {
+  position: relative;
+  margin-top: 1rem;
+  border-top-left-radius: 7.5rem;
+  border-bottom-left-radius: 7.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 197 85 / var(--tw-bg-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 2.5rem;
+}
+
+.call-icon {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 197 85 / var(--tw-bg-opacity));
+  border: 10px solid white;
+  transform: translateY(-50%);
+  width: 100px;
+  right: -55px;
+}
+
+.call-icon img {
+  width: 44px;
+}
+
+.dreams {
+  margin-top: 100px;
+}
+
+.dreams-left {
+  grid-column: span 8 / span 8;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+.dreams-right {
+  grid-column: span 4 / span 4;
+}
+
+.dreams-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  border-radius: 2.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
+}
+
+.dreams-heading {
+  padding-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(69 69 69 / var(--tw-text-opacity));
+  font-family: Priego-Bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.choice {
+  margin-top: 100px;
+}
+
+.choice-wrapper {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 28 28 / var(--tw-bg-opacity));
+  padding: 2.5rem;
+}
+
+.choice-wrapper .main-heading {
+  color: #ffffff;
+  font-family: Priego-Bold;
+}
+
+.choice-wrapper .sub-content {
+  text-align: center;
+}
+
+.cards {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
+  opacity: 0.15;
+}
+
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card-number {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: Outfit-Bold;
+}
+
+@media (max-width: 1399px) {
+  .left-hero-heading {
+    font-size: 36px;
+  }
+
+  .call-num {
+    font-size: 22px;
+  }
+
+  .call-text {
+    font-size: 16px;
+  }
+
+  .dreams-heading {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 1199px) {
+  .left-hero-heading {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .dreams-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .left-hero {
+    grid-column: span 12 / span 12;
+  }
+
+  .right-hero {
+    grid-column: span 12 / span 12;
+  }
+
+  .call-icon {
+    right: 0;
+  }
+
+  .callbar {
+    border-top-right-radius: 7.5rem;
+    border-bottom-right-radius: 7.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-hero-heading {
+    font-size: 28px;
+  }
+
+  .call-num {
+    font-size: 18px;
+  }
+
+  .dreams-heading {
+    font-size: 28px;
+  }
+
+  .dreams-left {
+    grid-column: span 12 / span 12;
+    padding: 2.5rem;
+  }
+
+  .dreams-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .left-hero-heading {
+    font-size: 24px;
+  }
+
+  .call-num {
+    font-size: 18px;
+  }
+
+  .call-text {
+    font-size: 14px;
+  }
+
+  .dreams-heading {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

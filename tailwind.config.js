@@ -7,12 +7,11 @@ module.exports = {
         sm: "576px",
         md: "768px",
         lg: "992px",
-        xl: "1200px",
-        "2xl": "1440px",
+        xl: "1199px",
+        "2xl": "1339px",
       },
       container: {
         center: true,
-        padding: "2rem",
       },
       colors: {
         primary: {
@@ -26,6 +25,9 @@ module.exports = {
         },
         grey: {
           DEFAULT: "#F6F6F6",
+        },
+        heading: {
+          DEFAULT: "#454545",
         },
       },
     },
