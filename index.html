@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/common.css">
     <link rel="stylesheet" href="/assets/css/header.css">
 </head>
 
 <body>
     <header>
-        <nav class=" container">
+        <nav class="container">
             <div class="navbar ">
                 <div class="logo">
                     <a href="#">
@@ -25,16 +26,42 @@
                         <li><a href="#whyus">Why Choose Us</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
+                    <ul class="menu">
+                        <li><a class="menuItem" href="#about">About Us</a></li>
+                        <li><a class="menuItem" href="#service">Service</a></li>
+                        <li><a class="menuItem" href="#whyus">Why Choose Us</a></li>
+                        <li><a class="menuItem" href="#faq">FAQ</a></li>
+                    </ul>
                 </div>
                 <div class="enquiry-btn">
                     <button class="nav-btn">Enquire now</button>
                 </div>
-                <div id="burger-menu">
-                    <span class="middle"></span>
-                </div>
+                <button class="hamburger">
+                    <i class="menuIcon material-icons">menu</i>
+                    <i class="closeIcon material-icons">close</i>
+                </button>
             </div>
         </nav>
     </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="main-heading">
+                    Global shipping solutions for Personal Effects & Household goods.
+                </h1>
+                <div class="hero-content">
+                    <div class="left-hero">
+                        <p>Your Trusted Freight and Logistics Partner in Australia</p>
+                        <p>Ausfreight Solutions turns aspirations into success stories, transcending borders with
+                            precision.</p>
+                    </div>
+                    <div class="right-hero"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
 </body>
+<script src="/assets/js/hamburger.js"></script>
 
 </html>
