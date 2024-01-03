@@ -175,6 +175,159 @@
 }
 //enquire section ends
 
+// connect section starts
+.connect {
+  margin-top: 100px;
+}
+.connect-wrapper {
+  @apply bg-black p-10 rounded-[2.5rem] relative;
+
+  .main-heading {
+    color: #ffffff;
+    font-family: Priego-Bold;
+  }
+  .sub-content {
+    padding-top: 24px;
+    text-align: center;
+  }
+}
+.shipping {
+  @apply grid grid-cols-2 gap-6 pt-10;
+
+  .right {
+    @apply px-6;
+  }
+}
+.air {
+  h1 {
+    font-family: Priego-Bold;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    color: #ffffff;
+  }
+  .service {
+    font-family: Outfit-Regular;
+    font-size: 1.125rem;
+    line-height: 140%;
+    color: #ffffff;
+    padding: 6px 0 16px 0;
+  }
+  .description {
+    @apply text-light pb-12;
+  }
+}
+.sea {
+  h1 {
+    font-family: Priego-Bold;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    color: #ffffff;
+  }
+  .service {
+    font-family: Outfit-Regular;
+    font-size: 1.125rem;
+    line-height: 140%;
+    color: #ffffff;
+    padding: 6px 0 16px 0;
+  }
+  .description {
+    @apply text-light;
+  }
+}
+// connect section ends
+
+// how it woks starts
+.work {
+  margin-top: 100px;
+}
+.work-wrapper {
+  @apply bg-grey rounded-[2.5rem] p-10;
+  .main-heading {
+    @apply text-heading;
+  }
+  .sub-content {
+    @apply text-center p-6;
+  }
+}
+.workflow {
+  @apply pt-10;
+}
+.work-top-icons {
+  @apply flex gap-44;
+}
+.work-bottom-icons {
+  @apply flex gap-[120px];
+  padding-top: 86px;
+  margin-left: 150px;
+}
+.work-text {
+  font-family: Priego-Semibold;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 29px;
+}
+.icon1 {
+  @apply flex flex-col justify-between;
+  max-width: 200px;
+  .img {
+    @apply mx-auto w-max;
+  }
+}
+.icon3 {
+  @apply flex flex-col justify-between;
+  max-width: 230px;
+  .img {
+    @apply mx-auto w-max;
+  }
+}
+.icon5 {
+  @apply flex flex-col justify-between;
+  max-width: 200px;
+  .img {
+    @apply mx-auto w-max;
+  }
+}
+.icon2 {
+  @apply flex flex-col justify-between;
+  max-width: 210px;
+  .img {
+    @apply mx-auto w-max;
+  }
+}
+.icon4 {
+  @apply flex flex-col justify-between;
+  max-width: 270px;
+  .img {
+    @apply mx-auto w-max;
+  }
+}
+.icon6 {
+  @apply flex flex-col justify-between;
+  max-width: 250px;
+  .img {
+    @apply mx-auto w-max;
+  }
+}
+
+.outer-border {
+  @apply rounded-full flex;
+  outline: 2px solid #ffc555;
+  height: 42px;
+  width: 42px;
+}
+.num {
+  @apply rounded-full bg-primary text-center flex justify-center items-center m-auto;
+  font-family: Outfit-Semibold;
+  font-size: 20px;
+  line-height: 24px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+}
+
+// how it woks ends
+
 @media (max-width: 1399px) {
   .left-hero-heading {
     font-size: 36px;
@@ -193,6 +346,15 @@
     font-size: 36px;
     line-height: 46px;
   }
+  .air {
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  .sea h1 {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -208,6 +370,34 @@
   }
   .enquire-heading {
     font-size: 32px;
+  }
+  .air {
+    h1 {
+      font-size: 32px;
+    }
+    .service {
+      font-size: 1rem;
+      padding: 6px 0 6px 0;
+    }
+    .description {
+      @apply pb-6;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .sea {
+    h1 {
+      font-size: 32px;
+    }
+    .service {
+      font-size: 1rem;
+      padding: 6px 0 6px 0;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -239,6 +429,15 @@
   }
   .enquire-right {
     @apply col-span-12 pl-0 pt-10  text-center;
+  }
+  .air h1 {
+    font-size: 28px;
+  }
+  .sea h1 {
+    font-size: 28px;
+  }
+  .shipping {
+    @apply flex flex-col;
   }
 }
 
@@ -279,6 +478,20 @@
   .enquire-btn {
     @apply py-4;
   }
+  .shipping {
+    .right {
+      @apply p-0;
+    }
+  }
+  .connect-wrapper {
+    @apply p-6;
+  }
+  .air h1 {
+    font-size: 24px;
+  }
+  .sea h1 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -306,5 +519,11 @@
   .enquire-heading {
     font-size: 20px;
     line-height: 26px;
+  }
+  .air h1 {
+    font-size: 20px;
+  }
+  .sea h1 {
+    font-size: 20px;
   }
 }
