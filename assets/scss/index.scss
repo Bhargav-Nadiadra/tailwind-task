@@ -95,31 +95,85 @@
   margin-top: 100px;
 }
 .choice-wrapper {
-  @apply bg-black p-10;
+  @apply bg-black p-10 rounded-[2.5rem] relative;
 
   .main-heading {
     color: #ffffff;
     font-family: Priego-Bold;
   }
   .sub-content {
+    padding-top: 24px;
     text-align: center;
   }
 }
+
+.choice-bg {
+  position: absolute;
+  top: -45px;
+}
 .cards {
-  @apply bg-grey opacity-15;
+  @apply p-6 rounded-3xl;
+  background-color: rgba(246, 246, 246, 0.16);
+  flex: 0 0 max(33.33% - 16px, 270px);
 }
 
 .card-wrapper {
-  @apply flex items-center gap-6;
+  @apply flex  flex-wrap justify-center gap-6 pt-10;
 }
 
 .card-number {
+  font-family: Outfit-Bold;
   font-size: 32px;
   line-height: 40px;
-  font-family: Outfit-Bold;
-  //   color: #ffffff;
+  color: #ffffff;
+}
+
+.card-heading {
+  font-family: Priego-Regular;
+  padding-top: 8px;
+  font-size: 24px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.card-desc {
+  @apply text-light pt-4;
+  font-family: Outfit-Regular;
 }
 // choice section ends
+
+//enquire section starts
+.enquire {
+  margin-top: 100px;
+}
+.enquire-wrapper {
+  @apply grid grid-cols-12 bg-grey rounded-[2.5rem] p-10 items-center;
+}
+.enquire-bg {
+  position: absolute;
+  bottom: -25px;
+  left: -38px;
+  overflow: hidden;
+}
+
+.enquire-left {
+  @apply col-span-8 relative;
+}
+.enquire-heading {
+  @apply tracking-wider pb-6;
+  font-family: Priego-Bold;
+  font-size: 40px;
+  line-height: 46px;
+}
+.enquire-right {
+  @apply col-span-4 pl-14;
+}
+.enquire-btn {
+  @apply bg-primary py-6 w-full rounded-2xl;
+  font-family: Outfit-Regular;
+  font-weight: 500;
+}
+//enquire section ends
 
 @media (max-width: 1399px) {
   .left-hero-heading {
@@ -135,6 +189,10 @@
     font-size: 36px;
     line-height: 1.2;
   }
+  .enquire-heading {
+    font-size: 36px;
+    line-height: 46px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -143,6 +201,12 @@
     line-height: 1.2;
   }
   .dreams-heading {
+    font-size: 32px;
+  }
+  .card-heading {
+    font-size: 20px;
+  }
+  .enquire-heading {
     font-size: 32px;
   }
 }
@@ -158,7 +222,23 @@
     right: 0;
   }
   .callbar {
-    @apply rounded-r-[7.5rem];
+    @apply rounded-r-[7.5rem] pl-8;
+  }
+  .card-number {
+    font-size: 28px;
+  }
+  .cards {
+    flex: 0 0 max(50% - 16px, 270px);
+  }
+  .enquire-heading {
+    font-size: 28px;
+    line-height: 46px;
+  }
+  .enquire-left {
+    @apply col-span-12 text-center;
+  }
+  .enquire-right {
+    @apply col-span-12 pl-0 pt-10  text-center;
   }
 }
 
@@ -173,7 +253,7 @@
     font-size: 28px;
   }
   .dreams-left {
-    @apply col-span-12 p-10;
+    @apply col-span-12 p-6;
   }
   .dreams-right {
     position: absolute;
@@ -181,11 +261,35 @@
     right: 0;
     max-width: 350px;
   }
+  .choice-wrapper {
+    @apply p-6;
+  }
+  .card-heading {
+    font-size: 18px;
+  }
+  .cards {
+    flex: 0 0 max(100%);
+  }
+  .enquire-heading {
+    font-size: 24px;
+  }
+  .enquire-wrapper {
+    @apply p-6;
+  }
+  .enquire-btn {
+    @apply py-4;
+  }
 }
 
 @media (max-width: 576px) {
   .left-hero-heading {
     font-size: 24px;
+  }
+  .left-bg {
+    @apply p-6;
+  }
+  .callbar {
+    @apply py-4;
   }
   .call-num {
     font-size: 18px;
@@ -193,7 +297,14 @@
   .call-text {
     font-size: 14px;
   }
+  .call-icon {
+    width: 90px;
+  }
   .dreams-heading {
     font-size: 24px;
+  }
+  .enquire-heading {
+    font-size: 20px;
+    line-height: 26px;
   }
 }

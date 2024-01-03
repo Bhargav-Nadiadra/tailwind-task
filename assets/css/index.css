@@ -138,6 +138,8 @@
 }
 
 .choice-wrapper {
+  position: relative;
+  border-radius: 2.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(28 28 28 / var(--tw-bg-opacity));
   padding: 2.5rem;
@@ -149,25 +151,100 @@
 }
 
 .choice-wrapper .sub-content {
+  padding-top: 24px;
   text-align: center;
 }
 
+.choice-bg {
+  position: absolute;
+  top: -45px;
+}
+
 .cards {
-  --tw-bg-opacity: 1;
-  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
-  opacity: 0.15;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(246, 246, 246, 0.16);
+  flex: 0 0 max(33.33% - 16px, 270px);
 }
 
 .card-wrapper {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
+  padding-top: 2.5rem;
 }
 
 .card-number {
+  font-family: Outfit-Bold;
   font-size: 32px;
   line-height: 40px;
-  font-family: Outfit-Bold;
+  color: #ffffff;
+}
+
+.card-heading {
+  font-family: Priego-Regular;
+  padding-top: 8px;
+  font-size: 24px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.card-desc {
+  padding-top: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
+  font-family: Outfit-Regular;
+}
+
+.enquire {
+  margin-top: 100px;
+}
+
+.enquire-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  border-radius: 2.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 246 246 / var(--tw-bg-opacity));
+  padding: 2.5rem;
+}
+
+.enquire-bg {
+  position: absolute;
+  bottom: -25px;
+  left: -38px;
+  overflow: hidden;
+}
+
+.enquire-left {
+  position: relative;
+  grid-column: span 8 / span 8;
+}
+
+.enquire-heading {
+  padding-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  font-family: Priego-Bold;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.enquire-right {
+  grid-column: span 4 / span 4;
+  padding-left: 3.5rem;
+}
+
+.enquire-btn {
+  width: 100%;
+  border-radius: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 197 85 / var(--tw-bg-opacity));
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-family: Outfit-Regular;
+  font-weight: 500;
 }
 
 @media (max-width: 1399px) {
@@ -187,6 +264,11 @@
     font-size: 36px;
     line-height: 1.2;
   }
+
+  .enquire-heading {
+    font-size: 36px;
+    line-height: 46px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -196,6 +278,14 @@
   }
 
   .dreams-heading {
+    font-size: 32px;
+  }
+
+  .card-heading {
+    font-size: 20px;
+  }
+
+  .enquire-heading {
     font-size: 32px;
   }
 }
@@ -216,6 +306,32 @@
   .callbar {
     border-top-right-radius: 7.5rem;
     border-bottom-right-radius: 7.5rem;
+    padding-left: 2rem;
+  }
+
+  .card-number {
+    font-size: 28px;
+  }
+
+  .cards {
+    flex: 0 0 max(50% - 16px, 270px);
+  }
+
+  .enquire-heading {
+    font-size: 28px;
+    line-height: 46px;
+  }
+
+  .enquire-left {
+    grid-column: span 12 / span 12;
+    text-align: center;
+  }
+
+  .enquire-right {
+    grid-column: span 12 / span 12;
+    padding-left: 0px;
+    padding-top: 2.5rem;
+    text-align: center;
   }
 }
 
@@ -234,7 +350,7 @@
 
   .dreams-left {
     grid-column: span 12 / span 12;
-    padding: 2.5rem;
+    padding: 1.5rem;
   }
 
   .dreams-right {
@@ -243,11 +359,45 @@
     right: 0;
     max-width: 350px;
   }
+
+  .choice-wrapper {
+    padding: 1.5rem;
+  }
+
+  .card-heading {
+    font-size: 18px;
+  }
+
+  .cards {
+    flex: 0 0 100%;
+  }
+
+  .enquire-heading {
+    font-size: 24px;
+  }
+
+  .enquire-wrapper {
+    padding: 1.5rem;
+  }
+
+  .enquire-btn {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
   .left-hero-heading {
     font-size: 24px;
+  }
+
+  .left-bg {
+    padding: 1.5rem;
+  }
+
+  .callbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .call-num {
@@ -258,8 +408,17 @@
     font-size: 14px;
   }
 
+  .call-icon {
+    width: 90px;
+  }
+
   .dreams-heading {
     font-size: 24px;
+  }
+
+  .enquire-heading {
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 /*# sourceMappingURL=index.css.map */
