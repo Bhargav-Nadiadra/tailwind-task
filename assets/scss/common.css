@@ -60,12 +60,27 @@ img {
   line-height: 23px;
 }
 
+.special {
+  font-family: Outfit-Bold;
+  font-size: 4.5rem;
+  line-height: 1;
+  letter-spacing: 0.09rem;
+}
+
+.slash {
+  @apply text-black;
+  font-family: Outfit-Semibold;
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+
 .main-heading {
   text-align: center;
-  font-family: Outfit-Bold;
+  font-family: Priego-Bold;
   font-size: 4.5rem;
   line-height: normal;
   letter-spacing: 0.09rem;
+  color: #05041f;
 }
 
 .sub-content {
@@ -88,6 +103,9 @@ img {
   .main-heading {
     font-size: 64px;
   }
+  .special {
+    font-size: 64px;
+  }
   .sub-content {
     font-size: 22px;
     line-height: 1.8rem;
@@ -99,6 +117,9 @@ img {
     @apply px-6;
   }
   .main-heading {
+    font-size: 56px;
+  }
+  .special {
     font-size: 56px;
   }
   .sub-content {
@@ -114,6 +135,9 @@ img {
   .main-heading {
     font-size: 48px;
   }
+  .special {
+    font-size: 48px;
+  }
   .sub-content {
     font-size: 18px;
     line-height: 1.2rem;
@@ -126,12 +150,18 @@ img {
   .main-heading {
     font-size: 40px;
   }
+  .special {
+    font-size: 40px;
+  }
 }
 @media (max-width: 576px) {
   .container {
     max-width: 100%;
   }
   .main-heading {
+    font-size: 36px;
+  }
+  .special {
     font-size: 36px;
   }
   .sub-content {
