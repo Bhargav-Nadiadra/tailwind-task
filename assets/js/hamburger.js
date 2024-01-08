@@ -1,5 +1,3 @@
-const { document } = require("postcss");
-
 const menu = document.querySelector(".menu");
 const menuItems = document.querySelectorAll(".menuItem");
 const hamburger = document.querySelector(".hamburger");
@@ -22,4 +20,24 @@ hamburger.addEventListener("click", toggleMenu);
 
 menuItems.forEach(function (menuItem) {
   menuItem.addEventListener("click", toggleMenu);
+});
+
+// function stopscroll() {
+//   var element = document.getElementById("hamburger-scroll");
+//   element.classList.add("stop");
+//   // document.body.classList.add(" stop");
+// }
+
+// function removescroll() {
+//   var element = document.getElementById("hamburger-scroll");
+//   element.classList.remove("header-scroll stop");
+// }
+
+$(".hamburger").click(function () {
+  if ($(this).hasClass("current")) {
+    $(this).removeClass("current");
+  } else {
+    $(".hamburger").removeClass("current");
+    $(this).addClass("current");
+  }
 });

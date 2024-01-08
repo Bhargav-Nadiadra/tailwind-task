@@ -2,49 +2,50 @@
 .hero {
   margin-top: 53px;
 }
+// .humberger {
+//   overflow: hidden;
+// }
+
+// .current {
+//   overflow: hidden;
+// }
 
 .hero-content {
   @apply grid grid-cols-12 gap-4 pt-6;
 }
 
 .left-hero {
-  @apply relative col-span-5 flex flex-col justify-between;
+  @apply col-span-5 flex flex-col justify-between;
 
-  .bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 320px;
-    border-radius: 2.5rem;
-  }
   .sub-content {
-    position: relative;
-    z-index: 10;
+    @apply relative z-10;
   }
 }
 
 .left-bg {
-  @apply bg-grey p-10 rounded-[2.5rem];
+  @apply bg-grey p-10 relative overflow-hidden;
+  border-radius: 2.5rem;
+  .bg {
+    @apply absolute top-0 right-0 opacity-60;
+    max-width: 318px;
+  }
 }
 
 .right-hero {
-  @apply col-span-7;
+  @apply col-span-7 overflow-hidden;
+  border-radius: 2.5rem;
 
   img {
-    @apply rounded-[2.5rem];
-    object-fit: cover;
-    object-position: center;
+    @apply rounded-[2.5rem] object-cover object-center;
     height: 100%;
   }
 }
 .left-hero-heading {
-  @apply tracking-wider font-normal leading-10 text-heading;
+  @apply tracking-wider font-normal leading-10 text-heading relative z-10;
   font-family: Priego-Regular;
   font-size: 2.5rem;
   padding-bottom: 50px;
   max-width: 248px;
-  position: relative;
-  z-index: 10;
 }
 
 .call-text {
@@ -65,14 +66,11 @@
 }
 
 .call-icon {
-  @apply absolute top-1/2 bottom-1/2  items-center rounded-full h-full justify-center flex bg-primary;
+  @apply absolute top-1/2  items-center rounded-full h-full justify-center flex bg-primary;
   border: 10px solid white;
   transform: translateY(-50%);
   width: 100px;
   right: -55px;
-  img {
-    width: 44px;
-  }
 }
 // hero-section ends
 
@@ -80,7 +78,6 @@
 .dreams {
   margin-top: 100px;
 }
-
 .dreams-left {
   @apply col-span-8 py-10 pl-10;
 }
@@ -88,7 +85,7 @@
   @apply col-span-4;
 }
 .dreams-wrapper {
-  @apply bg-grey  rounded-[2.5rem] grid grid-cols-12 relative;
+  @apply bg-grey  rounded-[2.5rem] grid grid-cols-12 relative overflow-hidden;
 }
 .dreams-heading {
   @apply tracking-wider text-heading pb-6;
@@ -106,19 +103,16 @@
   @apply bg-black p-10 rounded-[2.5rem] relative;
 
   .main-heading {
-    position: relative;
-    z-index: 10;
-    color: #ffffff;
+    @apply relative z-10 text-white;
     font-family: Priego-Bold;
   }
   .sub-content {
-    padding-top: 24px;
-    text-align: center;
+    @apply pt-6 text-center;
   }
 }
 
 .choice-bg {
-  position: absolute;
+  @apply absolute left-0;
   top: -45px;
 }
 .cards {
@@ -139,16 +133,17 @@
 }
 
 .card-heading {
+  @apply pt-2 text-white;
   font-family: Priego-Regular;
-  padding-top: 8px;
   font-size: 24px;
   line-height: 26px;
-  color: #ffffff;
 }
 
 .card-desc {
   @apply text-light pt-4;
   font-family: Outfit-Regular;
+  font-size: 18px;
+  line-height: 25px;
 }
 // choice section ends
 
@@ -160,34 +155,28 @@
   @apply grid grid-cols-12 bg-grey rounded-[2.5rem] p-10 items-center relative;
 }
 .enquire-bg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  @apply absolute bottom-0 left-0;
 }
 
 .enquire-left {
   @apply col-span-8;
 
   .sub-content {
-    position: relative;
-    z-index: 10;
+    @apply relative z-10;
   }
 }
 .enquire-heading {
-  @apply tracking-wider pb-6;
+  @apply text-heading tracking-wider pb-6 relative z-10;
   font-family: Priego-Bold;
   font-size: 40px;
   line-height: 46px;
-  position: relative;
-  z-index: 10;
 }
 .enquire-right {
   @apply col-span-4 pl-14;
 }
 .enquire-btn {
-  @apply bg-primary py-6 w-full rounded-2xl;
+  @apply bg-primary py-6 w-full rounded-2xl font-medium;
   font-family: Outfit-Regular;
-  font-weight: 500;
 }
 //enquire section ends
 
@@ -199,14 +188,11 @@
   @apply bg-black p-10 rounded-[2.5rem] relative;
 
   .main-heading {
-    color: #ffffff;
+    @apply text-white relative z-10;
     font-family: Priego-Bold;
-    position: relative;
-    z-index: 10;
   }
   .sub-content {
-    padding-top: 24px;
-    text-align: center;
+    @apply pt-6 text-center;
   }
 }
 .shipping {
@@ -218,11 +204,10 @@
 }
 .air {
   h1 {
+    @apply font-bold text-white;
     font-family: Priego-Bold;
     font-size: 2.5rem;
-    font-weight: 700;
     line-height: 120%;
-    color: #ffffff;
   }
   .service {
     font-family: Outfit-Regular;
@@ -237,11 +222,10 @@
 }
 .sea {
   h1 {
+    @apply font-bold text-white;
     font-family: Priego-Bold;
     font-size: 2.5rem;
-    font-weight: 700;
     line-height: 120%;
-    color: #ffffff;
   }
   .service {
     font-family: Outfit-Regular;
@@ -275,27 +259,27 @@
   row-gap: 86px;
 
   .line1 {
-    position: absolute;
+    @apply absolute;
     top: 49%;
     left: 102px;
   }
   .line2 {
-    position: absolute;
+    @apply absolute;
     top: 47%;
     left: 31%;
   }
   .line3 {
-    position: absolute;
+    @apply absolute;
     top: 46%;
     left: 52%;
   }
   .line4 {
-    position: absolute;
+    @apply absolute;
     top: 48%;
     right: 18%;
   }
   .line5 {
-    position: absolute;
+    @apply absolute;
     top: 48%;
     right: 12%;
   }
@@ -321,7 +305,7 @@
     @apply mx-auto w-max;
   }
   .outer-border {
-    position: absolute;
+    @apply absolute;
     bottom: -54px;
     left: 73px;
   }
@@ -334,7 +318,7 @@
     @apply mx-auto w-max;
   }
   .outer-border {
-    position: absolute;
+    @apply absolute;
     bottom: -45px;
     right: 6px;
   }
@@ -346,7 +330,7 @@
     @apply mx-auto w-max;
   }
   .outer-border {
-    position: absolute;
+    @apply absolute;
     bottom: -45px;
     right: 34px;
   }
@@ -359,8 +343,7 @@
     @apply mx-auto w-max;
   }
   .outer-border {
-    position: absolute;
-    top: 0;
+    @apply absolute top-0;
     right: -6px;
   }
 }
@@ -372,7 +355,7 @@
     @apply mx-auto w-max;
   }
   .outer-border {
-    position: absolute;
+    @apply absolute;
     top: 22px;
     right: 14px;
   }
@@ -385,7 +368,7 @@
     @apply mx-auto w-max;
   }
   .outer-border {
-    position: absolute;
+    @apply absolute;
     top: 124px;
     left: 2px;
   }
@@ -405,8 +388,102 @@
   width: calc(100% - 8px);
   height: calc(100% - 8px);
 }
-
 // how it woks ends
+
+// testimonial starts
+.testimonial {
+  margin-top: 100px;
+}
+.testimonial-wrapper {
+  @apply bg-grey rounded-[2.5rem] p-10 relative overflow-hidden;
+  .bg-img {
+    @apply absolute top-0 left-0;
+  }
+  .content-wrapper {
+    @apply flex justify-between mt-16;
+    .content {
+      @apply text-light;
+      font-family: Outfit-Regular;
+      max-width: 956px;
+      font-size: 2rem;
+      line-height: 160%;
+      letter-spacing: 0.04rem;
+    }
+    .profile {
+      @apply flex flex-col justify-between;
+      img {
+        @apply mx-auto;
+        max-width: 120px;
+      }
+      .button-wrapper {
+        @apply flex justify-between;
+      }
+    }
+  }
+}
+.person-details {
+  @apply flex;
+  .name {
+    @apply text-primary ml-6;
+    font-family: Priego-SemiBold;
+    font-size: 2rem;
+    letter-spacing: 0.04rem;
+  }
+  .location {
+    @apply text-heading ml-6;
+    font-family: Outfit-Regular;
+    font-size: 1.25rem;
+    letter-spacing: 0.025rem;
+  }
+}
+// testimonial ends
+
+// client section starts
+.clients {
+  margin-top: 100px;
+}
+.clients-wrapper {
+  @apply bg-black relative p-10 rounded-[2.5rem];
+  .bg {
+    @apply absolute left-0;
+    top: -45px;
+  }
+  .main-heading {
+    @apply text-white relative z-10;
+  }
+  .sub-content {
+    @apply text-center pt-6;
+  }
+  .gallery {
+    @apply flex justify-center items-center gap-6 mt-10;
+  }
+}
+// client section ends
+
+// faq section starts
+.faq {
+  margin-top: 100px;
+  .main-heading {
+    @apply text-heading;
+  }
+  .sub-content {
+    @apply text-center;
+  }
+}
+.faq-wrapper {
+  @apply bg-grey rounded-[2.5rem] p-10;
+}
+
+.question-wrapper {
+  @apply p-10;
+  .question {
+    @apply flex justify-between;
+  }
+  .arrow {
+    max-width: 42px;
+  }
+}
+// faq section ends
 
 @media (max-width: 1399px) {
   .left-hero-heading {
@@ -440,10 +517,6 @@
   .icon3 {
     margin-right: 120px;
   }
-  .icon5 {
-  }
-  .icon2 {
-  }
   .icon4 {
     margin-left: 80px;
   }
@@ -455,6 +528,14 @@
       right: 14%;
     }
   }
+  .testimonial-wrapper {
+    .content-wrapper {
+      .content {
+        max-width: 800px;
+        font-size: 1.75rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 1199px) {
@@ -463,14 +544,30 @@
     line-height: 1.2;
     max-width: 385px;
   }
+  .dreams {
+    margin-top: 80px;
+  }
   .dreams-heading {
     font-size: 32px;
+  }
+  .choice {
+    margin-top: 80px;
   }
   .card-heading {
     font-size: 20px;
   }
+  .enquire {
+    margin-top: 80px;
+  }
   .enquire-heading {
     font-size: 32px;
+  }
+  .card-desc {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .connect {
+    margin-top: 80px;
   }
   .air {
     h1 {
@@ -498,6 +595,9 @@
       font-size: 16px;
       line-height: 24px;
     }
+  }
+  .work {
+    margin-top: 80px;
   }
   .work-top-icons {
     gap: 60px;
@@ -595,6 +695,23 @@
       right: 11%;
     }
   }
+  .testimonial {
+    margin-top: 80px;
+  }
+  .testimonial-wrapper {
+    .content-wrapper {
+      .content {
+        max-width: 700px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .clients {
+    margin-top: 80px;
+  }
+  .faq {
+    margin-top: 80px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -623,6 +740,21 @@
   .cards {
     flex: 0 0 max(50% - 16px, 270px);
   }
+  .dreams {
+    margin-top: 64px;
+  }
+  .dreams-left {
+    @apply col-span-9;
+  }
+  .dreams-right {
+    @apply col-span-3;
+  }
+  .choice {
+    margin-top: 64px;
+  }
+  .enquire {
+    margin-top: 64px;
+  }
   .enquire-heading {
     font-size: 28px;
     line-height: 46px;
@@ -631,11 +763,13 @@
     @apply col-span-12 text-center;
   }
   .enquire-bg {
-    bottom: 50%;
-    left: 0;
+    @apply bottom-2/4 left-0;
   }
   .enquire-right {
-    @apply col-span-12 pl-0 pt-10  text-center;
+    @apply col-span-12 pl-0 pt-14  text-center;
+  }
+  .connect {
+    margin-top: 64px;
   }
   .air h1 {
     font-size: 28px;
@@ -646,19 +780,11 @@
   .shipping {
     @apply flex flex-col;
   }
-  .workflow {
-    @apply flex-nowrap flex-col;
+  .work {
+    margin-top: 64px;
   }
-  .workflow::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    background-color: #ffc555;
-    opacity: 0.5;
-    top: 100px;
-    bottom: 100px;
-    left: 50%;
-    margin-left: -4px;
+  .workflow {
+    @apply flex-nowrap flex-col gap-y-0;
   }
   .work-text {
     font-size: 20px;
@@ -680,79 +806,120 @@
     @apply hidden;
   }
   .icon1 {
-    @apply order-1;
-    margin: 0;
+    @apply order-1 m-0 relative;
     max-width: 50%;
-    position: unset;
+    .img {
+      max-width: 160px;
+    }
     .outer-border {
-      top: 4%;
-      left: 50%;
-      transform: translateX(-50%);
+      @apply top-2/4 left-full -translate-y-2/4;
+    }
+    .work-text {
+      margin: 0px 60px;
     }
   }
   .icon2 {
-    @apply order-2;
-    margin-left: auto;
+    @apply order-2 ml-auto relative;
     max-width: 50%;
-    position: unset;
+    .img {
+      max-width: 160px;
+    }
     .outer-border {
-      top: 23%;
-      z-index: 1;
-      left: 50%;
-      transform: translateX(-50%);
+      @apply top-2/4 right-full -translate-y-2/4;
+    }
+    .work-text {
+      margin: 0px 60px;
     }
   }
   .icon3 {
-    @apply order-3;
-    margin: 0;
+    @apply order-3 m-0 relative;
     max-width: 50%;
-    position: unset;
+    .img {
+      max-width: 160px;
+    }
     .outer-border {
-      top: 40%;
-      z-index: 1;
-      left: 50%;
-      transform: translateX(-50%);
+      @apply top-2/4 left-full -translate-y-2/4;
+    }
+    .work-text {
+      margin: 0px 60px;
     }
   }
   .icon4 {
-    @apply order-4;
-    margin-left: auto;
+    @apply order-4 ml-auto relative;
     max-width: 50%;
-    position: unset;
+    .img {
+      max-width: 160px;
+    }
     .outer-border {
-      top: 58%;
-      z-index: 1;
-      left: 50%;
-      transform: translateX(-50%);
+      @apply top-2/4 right-full -translate-y-2/4;
+    }
+    .work-text {
+      margin: 0px 60px;
     }
   }
   .icon5 {
-    @apply order-5;
-    margin: 0;
+    @apply order-5 m-0 relative;
     max-width: 50%;
-    position: unset;
+    .img {
+      max-width: 160px;
+    }
     .outer-border {
-      top: 75%;
-      z-index: 1;
-      left: 50%;
-      transform: translateX(-50%);
+      @apply top-2/4 left-full -translate-y-2/4;
+    }
+    .work-text {
+      margin: 0px 60px;
     }
   }
   .icon6 {
-    @apply order-6;
-    margin-left: auto;
+    @apply order-6 ml-auto relative;
     max-width: 50%;
-    position: unset;
-    .outer-border {
-      top: 93%;
-      z-index: 1;
-      left: 50%;
-      transform: translateX(-50%);
+    .img {
+      max-width: 160px;
     }
+    .outer-border {
+      @apply top-2/4 right-full -translate-y-2/4;
+    }
+    .work-text {
+      margin: 0px 60px;
+    }
+  }
+  .testimonial {
+    margin-top: 64px;
+  }
+  .testimonial-wrapper {
+    .content-wrapper {
+      @apply flex-col;
+      .content {
+        max-width: 700px;
+        font-size: 1.5rem;
+        line-height: 1.4;
+      }
+      .profile {
+        @apply mt-6;
+        .button-wrapper {
+          @apply justify-center mt-4;
+        }
+      }
+    }
+  }
+  .clients {
+    margin-top: 64px;
+  }
+  .faq {
+    margin-top: 64px;
   }
 }
 
 @media (max-width: 768px) {
+  .left-hero {
+    @apply rounded-[2rem];
+    .bg {
+      max-width: 160px;
+    }
+  }
+  .left-bg {
+    border-radius: 1.5rem;
+  }
   .left-hero-heading {
     font-size: 28px;
     max-width: 295px;
@@ -760,36 +927,59 @@
   .call-num {
     font-size: 18px;
   }
+  .right-hero img {
+    @apply rounded-[2rem];
+  }
+  .dreams {
+    margin-top: 48px;
+  }
+  .dreams-wrapper {
+    @apply rounded-[2rem] overflow-hidden;
+  }
   .dreams-heading {
     font-size: 28px;
   }
   .dreams-left {
     @apply col-span-12 p-6;
     .sub-content {
-      position: relative;
-      z-index: 10;
+      @apply relative z-10;
     }
   }
   .dreams-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 350px;
+    @apply absolute top-0 right-0 opacity-60;
+    max-width: 270px;
+  }
+  .choice {
+    margin-top: 48px;
   }
   .choice-wrapper {
-    @apply p-6;
+    @apply p-6 rounded-[2rem];
   }
   .card-heading {
     font-size: 18px;
   }
   .cards {
-    flex: 0 0 max(100%);
+    flex: 0 0 max(50% - 16px, 200px);
+    padding: 1rem;
+  }
+  .card-desc {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .card-wrapper {
+    gap: 1rem;
+  }
+  .enquire {
+    margin-top: 48px;
   }
   .enquire-heading {
     font-size: 24px;
   }
   .enquire-wrapper {
-    @apply p-6;
+    @apply p-6 rounded-[2rem];
+  }
+  .enquire-bg {
+    bottom: 36%;
   }
   .enquire-btn {
     @apply py-4;
@@ -799,8 +989,11 @@
       @apply p-0;
     }
   }
+  .connect {
+    margin-top: 48px;
+  }
   .connect-wrapper {
-    @apply p-6;
+    @apply p-6 rounded-[2rem];
   }
   .air h1 {
     font-size: 24px;
@@ -808,14 +1001,49 @@
   .sea h1 {
     font-size: 24px;
   }
+  .work {
+    margin-top: 48px;
+  }
+  .work-wrapper {
+    @apply rounded-[2rem];
+  }
+  .testimonial {
+    margin-top: 48px;
+  }
+  .testimonial-wrapper {
+    @apply p-6 rounded-[1.5rem];
+    .content-wrapper {
+      @apply mt-8;
+    }
+  }
+  .clients {
+    margin-top: 48px;
+  }
+  .clients-wrapper {
+    @apply p-6 rounded-[1.5rem];
+  }
+  .faq {
+    margin-top: 48px;
+  }
 }
 
 @media (max-width: 576px) {
+  .left-hero {
+    @apply rounded-[1.5rem];
+    .bg {
+      max-width: 140px;
+    }
+  }
   .left-hero-heading {
     font-size: 24px;
+    max-width: 350px;
+    padding-bottom: 24px;
   }
   .left-bg {
     @apply p-6;
+  }
+  .right-hero img {
+    @apply rounded-[1.5rem];
   }
   .callbar {
     @apply py-4;
@@ -829,17 +1057,93 @@
   .call-icon {
     width: 90px;
   }
+  .dreams {
+    margin-top: 40px;
+  }
+  .dreams-wrapper {
+    @apply rounded-[1.5rem];
+  }
   .dreams-heading {
     font-size: 24px;
   }
+  .choice {
+    margin-top: 40px;
+  }
+  .choice-wrapper {
+    @apply p-6 rounded-[1.5rem];
+  }
+  .cards {
+    flex: 0 0 max(100%);
+  }
+  .enquire {
+    margin-top: 40px;
+  }
+  .enquire-wrapper {
+    @apply rounded-[1.5rem];
+  }
+  .enquire-bg {
+    max-width: 280px;
+  }
   .enquire-heading {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 26px;
+  }
+  .connect {
+    margin-top: 40px;
+  }
+  .connect-wrapper {
+    @apply rounded-[1.5rem];
   }
   .air h1 {
     font-size: 20px;
   }
   .sea h1 {
     font-size: 20px;
+  }
+  .work {
+    margin-top: 40px;
+  }
+  .work-wrapper {
+    @apply rounded-[1.5rem] p-6;
+    .main-heading {
+      font-size: 28px;
+    }
+  }
+  .testimonial {
+    margin-top: 40px;
+  }
+  .testimonial-wrapper {
+    @apply rounded-[1.5rem];
+    .content-wrapper {
+      .content {
+        font-size: 1.125rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  .person-details {
+    .name {
+      font-size: 1.5rem;
+    }
+  }
+  .clients {
+    margin-top: 40px;
+  }
+  .clients-wrapper {
+    .gallery {
+      @apply grid grid-cols-12 gap-4;
+      .left {
+        @apply order-2 col-span-6;
+      }
+      .center {
+        @apply order-1 col-span-12;
+      }
+      .right {
+        @apply order-3 col-span-6;
+      }
+    }
+  }
+  .faq {
+    margin-top: 40px;
   }
 }

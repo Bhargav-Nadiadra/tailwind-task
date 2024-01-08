@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .slider {
+            @apply flex items-center justify-center;
+
+            .priv-arrow {
+                position: absolute;
+                cursor: pointer;
+                bottom: -50px;
+                z-index: 10;
+                right: 51%;
+            }
+
+            .next-arrow {
+                position: absolute;
+                cursor: pointer;
+                bottom: -50px;
+                z-index: 10;
+                left: 51%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(".slider").slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            autoplay: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<span class="priv-arrow"><i class="bi bi-arrow-left"></i></span>',
+            nextArrow: '<span class="next-arrow"><i class="bi bi-arrow-right"></i></span>',
+        });
+    </script>
+</body>
+
+
+</html>

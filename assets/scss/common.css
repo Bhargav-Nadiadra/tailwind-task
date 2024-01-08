@@ -74,6 +74,32 @@ img {
   line-height: 120%;
 }
 
+.faq-number {
+  @apply text-light;
+  font-family: Outfit-Regular;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  letter-spacing: -0.03rem;
+}
+
+.faq-content {
+  @apply ml-11;
+}
+.faq-content .ques {
+  @apply text-light;
+  font-family: Priego-SemiBold;
+  font-size: 2rem;
+  line-height: normal;
+}
+.faq-content .ans {
+  @apply text-xl text-light pt-4;
+  font-family: "Outfit-Regular";
+}
+
+.scroll-stop {
+  overflow: hidden;
+}
+
 .main-heading {
   text-align: center;
   font-family: Priego-Bold;
@@ -166,6 +192,6 @@ img {
   }
   .sub-content {
     font-size: 16px;
-    line-height: 1rem;
+    line-height: 1.2;
   }
 }/*# sourceMappingURL=common.css.map */

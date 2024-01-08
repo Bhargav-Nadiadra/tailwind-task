@@ -33,7 +33,7 @@
 
 .menuItem {
   display: block;
-  margin: 2rem 4rem;
+  margin: 1rem 4rem;
   font-size: 1.8rem;
   color: #999999;
   text-decoration: none;
@@ -91,5 +91,6 @@
   }
   .hamburger {
     display: block;
+    padding: 0;
   }
 }/*# sourceMappingURL=header.css.map */

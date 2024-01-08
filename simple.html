@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Slider</title>
+    <link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <style>
+        .slider-container {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* .slider {
+            display: flex;
+            overflow: hidden;
+        } */
+
+        .slide {
+            flex: 0 0 100%;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #prevBtn,
+        #nextBtn {
+            border-radius: 9999px;
+            padding: 10px;
+            position: absolute;
+            top: 85%;
+            transform: translateY(-50%);
+            border: none;
+            cursor: pointer
+        }
+
+        #prevBtn {
+            left: 85%;
+        }
+
+        #nextBtn {
+            right: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <div class="testimonial-wrapper">
+                    <div class="bg-img"><img class="img-fluid" src="/assets/images/icons/testimonial-bg.svg" alt="">
+                    </div>
+                    <div class="person-details">
+                        <div class="apostrophe"><img class="img-fluid" src="/assets/images/icons/aphostrophe.svg"
+                                alt=""></div>
+                        <div>
+                            <span class="name">Kishan Bhatt</span>
+                            <div>
+                                <span class="location">India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="content">Choosing Ausfreight Solutions was a game-changer for our business.
+                            Their
+                            impeccable logistics
+                            expertise streamlined our
+                            operations, and their commitment to timely deliveries has exceeded our expectations.
+                            Truly a
+                            partner you can rely on.
+                        </div>
+                        <div class="profile">
+                            <div><img class="img-fluid" src="/assets/images/review-pic1.svg" alt=""></div>
+                            <div class="button-wrapper">
+                                <button id="prevBtn"><img src="/assets/images/icons/left-arrow.svg" alt=""></button>
+                                <button id="nextBtn"><img src="/assets/images/icons/right-arrow.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="testimonial-wrapper">
+                    <div class="bg-img"><img class="img-fluid" src="/assets/images/icons/testimonial-bg.svg" alt="">
+                    </div>
+                    <div class="person-details">
+                        <div class="apostrophe"><img class="img-fluid" src="/assets/images/icons/aphostrophe.svg"
+                                alt=""></div>
+                        <div>
+                            <span class="name">Kishan Bhatt 2</span>
+                            <div>
+                                <span class="location">India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="content">Choosing Ausfreight Solutions was a game-changer for our business.
+                            Their
+                            impeccable logistics
+                            expertise streamlined our
+                            operations, and their commitment to timely deliveries has exceeded our expectations.
+                            Truly a
+                            partner you can rely on.
+                        </div>
+                        <div class="profile">
+                            <div><img class="img-fluid" src="/assets/images/review-pic1.svg" alt=""></div>
+                            <div class="button-wrapper">
+                                <button id="prevBtn"><img src="/assets/images/icons/left-arrow.svg" alt=""></button>
+                                <button id="nextBtn"><img src="/assets/images/icons/right-arrow.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+
+    </div>
+    <script>
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const slider = document.querySelector(".slider");
+        const slides = document.querySelectorAll(".slide");
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? "block" : "none";
+            });
+        }
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        });
+
+        // Show the initial slide
+        showSlide(currentIndex);
+    </script>
+</body>
+
+</html>
